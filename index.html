@@ -142,56 +142,54 @@ margin-bottom: 30px;
   height: 35em; /* definindo a altura da imagem como 500px */
   object-fit: fill; /* para preencher a área da imagem e manter sua proporção de aspecto */
 }
-    .melhorLeitura{
-        color: #ffe600;text-shadow: 2px 2px 2px #000;font-weight: bolder;
-    }
-
-    @media (max-width: 767px) {
-  .carousel-caption .btn {
-    display: block;
-    margin-top: 10px;
-  }
+.melhorLeitura{
+    color: #ffe600;text-shadow: 2px 2px 2px #000;font-weight: bolder;
 }
-    </style>
 
+.desaparece {
+    display: none;
+  }
+
+    </style>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Castelo Bruxo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><img src="img/Brasao.png" style="width: 10%;border-radius: 50%;" class="img-fluid" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Castelo Bruxo</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><img src="img/Brasao.png" style="width: 10%;border-radius: 50%;" class="img-fluid" alt=""></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          <div class="row ">
+     
+          <div class="row desaparece">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -222,6 +220,7 @@ margin-bottom: 30px;
                         <p class="melhorLeitura">Castelo Bruxo recebe alunos de todo continente sul americano sendo uma escola para todos!</p>
                         <button class="btn btn-primary">SAIBA MAIS</button>
                     </div>
+                    
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -236,10 +235,38 @@ margin-bottom: 30px;
     
           </div>
           
-    
-          
-          
-    
+          <div class="row ">
+            <div class="col-md-4 card ">
+              <div class="p-3" style="height: 42em;">
+                <img src="img/CasteloBruxo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CASTELO BRUXO</h5>
+                  <p class="card-text">Castelo Bruxo recebe alunos de todo continente sul americano sendo uma escola para todos!</p>
+                  <button class="btn btn-primary">SAIBA MAIS</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 card ">
+              <div class="p-3 mr-2" style="height: 42em;">
+                <img src="img/CMB.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CSM - CONSELHO SUL AMERICANO DE MAGIA </h5>
+                  <p class="card-text">O CSM é a autoridade máxima Bruxa na América do Sul</p>
+                  <button class="btn btn-primary">SAIBA MAIS</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 card ">
+              <div class="p-3 mr-2" style="height: 46em;">
+                <img src="img/personagens.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Personagens</h5>
+                  <p class="card-text">A comunidade bruxa no Brasil é uma sociedade complexa e diversificada, composta por bruxos e bruxas de todas as idades, classes sociais, etnias e orientações sexuais.</p>
+                  <button class="btn btn-primary">SAIBA MAIS</button>
+                </div>
+              </div>
+            </div>
+          </div>
     <div class="mt-5">
         <div>
                 <h2>Wiki</h2>
@@ -288,3 +315,25 @@ margin-bottom: 30px;
     
 </body>
 </html>
+<script>
+  // Seleciona o elemento que você deseja modificar
+  const element = document.querySelector('.row.desaparece');
+
+
+
+// Função que adiciona ou remove a classe com base no tamanho da tela
+function ajustarClasse() {
+  if (window.innerWidth >= 990) {
+    // Remove a classe "desaparece" do elemento
+    element.classList.remove('desaparece');
+  } else {
+    element.classList.add('desaparece');
+  }
+}
+
+// Chama a função para ajustar a classe no carregamento da página
+ajustarClasse();
+
+// Adiciona um listener para o evento 'resize' da janela
+window.addEventListener('resize', ajustarClasse);
+</script>
