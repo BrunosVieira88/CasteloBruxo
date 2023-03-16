@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/stylo.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div id="myModal" style="display: none">
+    <div class="centro">
+            <button id="fecha" onclick="closeModal()">X</button>
+            <span id="frase"></span>
+    </div>
+</div>    
+<button class="btn btn-primary" onclick="openModal(pergunta0)";>Questionario</button>
+</body>
+<script>
+
+    let pergunta0 = `
+    <p>Quando se trata de tomar decisões importantes, qual dessas características mais se alinha com você?</p>
+    <button class="btn btn-primary" onclick="mostrarPergunta(1,4)">1</button> Sou capaz de identificar e avaliar cuidadosamente todas as opções disponíveis antes de tomar uma decisão <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(1,1)">2</button> Prefiro seguir minha intuição e tomar decisões rapidamente <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(1,2)">3</button> Gosto de planejar e seguir um plano cuidadosamente antes de tomar uma decisão<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(1,3)">4</button>  Levo em consideração a opinião dos outros antes de tomar uma decisão<br>`;
+
+    let pergunta1 = `
+    <p>Quando confrontado com um obstáculo difícil, qual dessas características mais se alinha com você?</p>
+    <button class="btn btn-primary" onclick="mostrarPergunta(2,4)">1</button>Busco soluções criativas para lidar com o obstáculo <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(2,1)">2</button> Sou capaz de lidar com o problema de forma corajosa e determinada <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(2,2)">3</button> Foco na estratégia para superar o obstáculo<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(2,3)">4</button>  Prefiro analisar cuidadosamente o problema antes de agir  <br>`;
+
+    let pergunta2 = `
+    <p>Qual dessas características mais se alinha com você?</p>
+    <button class="btn btn-primary" onclick="mostrarPergunta(3,3)">1</button> Valorizo a humildade e a honestidade <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(3,2)">2</button> Sou leal e comprometido com aqueles que confiam em mim <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(3,4)">3</button> Sou um pensador criativo e inovador<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(3,1)">4</button> Sou guiado pela paixão e motivação em tudo o que faço<br>`;	
+                        
+    let pergunta3 = `
+    <p>Quando liderando uma equipe, qual dessas características mais se alinha com você?</p>
+    <button class="btn btn-primary" onclick="mostrarPergunta(4,1)">1</button> Sou um líder corajoso e determinado, que inspira sua equipe a alcançar grandes objetivos <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(4,4)">2</button> Sou um líder que acredita que todos podem contribuir, quero que me vejam como um facilitador <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(4,2)">3</button>  Sou um líder leal e comprometido com minha equipe, sempre buscando trabalhar juntos em prol de um objetivo comum <br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(4,3)">4</button> Sou gentil e educado com minha equipe, encorajando o diálogo e a comunicação aberta <br>`;	
+    
+    let pergunta4 = `
+    <p>Como você costuma se comportar em situações de conflito?</p>
+    <button class="btn btn-primary" onclick="mostrarPergunta(5,4')">1</button>  Uso minha criatividade para buscar soluções inovadoras e não convencionais para resolver o conflito<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(5,3)">2</button> Tento compreender todos os pontos de vista envolvidos e buscar uma solução justa para todas as partes<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(5,1)">3</button> Procuro resolver o conflito de forma direta e objetiva<br>
+    <button class="btn btn-primary" onclick="mostrarPergunta(5,2)">4</button> Analiso cuidadosamente a situação e tento ver achar algo bom da situação <br>`;	
+
+    let vazio = [pergunta0, pergunta1, pergunta2, pergunta3, pergunta4];
+    let perguntaAtual = 0;
+    var RubroBravo = 0;
+    var Aurinegro = 0;
+    var BrancoForte = 0;
+    var VerdePluma = 0;
+
+function mostrarPergunta(numPergunta,Time) {
+
+    resultado = casa(Time);
+
+    if (numPergunta == 5) {
+       
+        Swal.fire({
+            title: 'Em castelo bruxo você estaria no time '+resultado,
+            imageUrl: 'img/'+resultado+'.png',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: resultado,
+            footer: '<a href='+resultado+'.html>Saiba Mais sobre seu Time</a>'
+        });
+
+            return;
+    }else{
+        perguntaAtual = numPergunta;
+       
+        document.getElementById("frase").innerHTML = vazio[perguntaAtual];
+    }    
+}
+
+function casa(Time){
+    if (Time == 1) {
+        RubroBravo++;
+    } else if (Time == 2) {
+        Aurinegro++;
+    } else if (Time == 3) {
+        BrancoForte++;
+    } else if (Time == 4) {
+        VerdePluma++;
+    }
+
+    if (RubroBravo > Aurinegro && RubroBravo > BrancoForte && RubroBravo > VerdePluma) {
+       return resultado = "RubroBravo";
+    } else if (Aurinegro > RubroBravo && Aurinegro > BrancoForte && Aurinegro > VerdePluma) {
+       return resultado = "Aurinegro";
+    } else if (BrancoForte > RubroBravo && BrancoForte > Aurinegro && BrancoForte > VerdePluma) {
+       return resultado = "BrancoForte";
+    } else if (VerdePluma > RubroBravo && VerdePluma > Aurinegro && VerdePluma > BrancoForte) {
+       return resultado = "VerdePluma";
+    } else {
+    // Se houver empate, escolher aleatoriamente
+    var opcoes = ["RubroBravo", "Aurinegro", "BrancoForte", "VerdePluma"];
+        return resultado = opcoes[Math.floor(Math.random() * opcoes.length)];
+    }
+}
+
+function openModal(frase) {
+
+var modal = document.getElementById("myModal");
+modal.style.display = "block";
+document.getElementById("frase").innerHTML =frase;
+}
+//fecha o Modal
+function closeModal() {
+var modal = document.getElementById("myModal");
+modal.style.display = "none";
+}
+</script>
+</html>

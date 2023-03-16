@@ -166,3 +166,35 @@ display: none;
 display: none;
 }
 
+#myModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  border: solid black 1px;
+  padding: 50px;
+  box-shadow: 2px 2px 2px black;
+}
+.tamanhoFluido h2 {
+  font-size: 22px;
+  color:blue;
+}
+#myModal .centro #fecha {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: #f44336;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+#frase{
+  margin-top: 15%;
+}
