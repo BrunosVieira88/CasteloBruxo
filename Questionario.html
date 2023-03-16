@@ -8,63 +8,109 @@
     <link rel="stylesheet" href="css/stylo.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body class="container">
 <div id="myModal" style="display: none">
     <div class="centro">
             <button id="fecha" onclick="closeModal()">X</button>
             <span id="frase"></span>
     </div>
 </div>    
+<div class="row text-center mt-5 card p-5 some">
+    <h1>Bem Vindo Jovem estudante</h1>
+    <p>Você esta prestes a entrar em CasteloBruxo, e vai ser escolhido para seu time</p>
+    <p>Há 4 times em CasteloBruxo e voce esta prestes a fazer um teste para determinar qual Time mais combina com você</p>
+    <p>Está Pronto o teste acaba de começar!</p>
+    <button class="btn btn-primary" onclick="openModal(pergunta0)";>Questionario</button>
+</div>
 
-<button class="btn btn-primary" onclick="openModal(pergunta0)";>Questionario</button>
 </body>
 <script>
 
     let pergunta0 = `
     
     <div class="row">
-        <h3>Quando se trata de tomar decisões importantes, qual dessas características mais se alinha com você?</h3>
-    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,4)">
-        Sou capaz de identificar e avaliar cuidadosamente todas as opções disponíveis antes de tomar uma decisão
+        <h3>Você acabou de entrar com varios outros alunos em uma sala totalmente escura, você não consegue ver sua propria mão o que voce faria?</h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,1)">
+        Falaria para ninguém ficar em panico pois você sabe que esse é apenas o primeiro teste para determinar sua casa
     </div>
     <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,4)">
-        Prefiro seguir minha intuição e tomar decisões rapidamente
+       Lummus!
     </div>
     <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,2)">
-        Gosto de planejar e seguir um plano cuidadosamente antes de tomar uma decisão
+        Perguntaria se todos estão bem, e tentaria acalmar quem estivesse com medo
     </div>
     <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,3)">
-        Levo em consideração a opinião dos outros antes de tomar uma decisão
+        Ficaria com um pouco de medo, e ficaria esperando alguem tomar a liderança
     </div>
 </div>`;
 
     let pergunta1 = `
-    <p>Quando confrontado com um obstáculo difícil, qual dessas características mais se alinha com você?</p>
-    <button class="btn btn-primary" onclick="mostrarPergunta(2,4)">1</button>Busco soluções criativas para lidar com o obstáculo <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(2,1)">2</button> Sou capaz de lidar com o problema de forma corajosa e determinada <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(2,2)">3</button> Foco na estratégia para superar o obstáculo<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(2,3)">4</button>  Prefiro analisar cuidadosamente o problema antes de agir  <br>`;
+    <div class="row">
+        <h3>Você esta jogando quadribol qual posição voce gostaria de jogar? </h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(2,4)">
+        Quero apanhar o pomo de ouro, sou um apanhador nato!
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(2,1)">
+        Nenhum dos meus amigos vai ser Atingido hoje, já meus adversarios vão suar para permanecerem em suas vassouras, o Batedor chegou!
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(2,3)">
+       Se depender de mim nada vai passar sou um Goleiro Excepcional
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(2,2)">
+        Vou levar meu time a vitoria e talvez nem precisemos dos pontos do pomo de ouro, eu sou um Artilheiro afinal das contas. 
+    </div>
+</div>`;
 
     let pergunta2 = `
-    <p>Qual dessas características mais se alinha com você?</p>
-    <button class="btn btn-primary" onclick="mostrarPergunta(3,3)">1</button> Valorizo a humildade e a honestidade <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(3,2)">2</button> Sou leal e comprometido com aqueles que confiam em mim <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(3,4)">3</button> Sou um pensador criativo e inovador<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(3,1)">4</button> Sou guiado pela paixão e motivação em tudo o que faço<br>`;	
+    <div class="row">
+        <h3>Um Trasgo aparece do nada você e varios alunos estão no caminho dele o que você faz? </h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(3,2)">
+        Chama todos os alunos e pedem para todos ficarem calmos 
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(3,3)">
+        Corram por suas Vidas !
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(3,1)">
+        Estupefaça!
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(3,4)">
+        Bom é mais um teste da escola eles nao deixariam nenhum aluno se machucar!
+    </div>
+</div>`;	
                         
     let pergunta3 = `
-    <p>Quando liderando uma equipe, qual dessas características mais se alinha com você?</p>
-    <button class="btn btn-primary" onclick="mostrarPergunta(4,1)">1</button> Sou um líder corajoso e determinado, que inspira sua equipe a alcançar grandes objetivos <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(4,4)">2</button> Sou um líder que acredita que todos podem contribuir, quero que me vejam como um facilitador <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(4,2)">3</button>  Sou um líder leal e comprometido com minha equipe, sempre buscando trabalhar juntos em prol de um objetivo comum <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(4,3)">4</button> Sou gentil e educado com minha equipe, encorajando o diálogo e a comunicação aberta <br>`;	
+    <div class="row">
+        <h3>voce olha para cima há um céu estrelado, voce esta proximo de um pequeno riacho, muitos estudantes estão confuso e nao sabem o que esta acontecendo</h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(4,1)">
+        Chama os alunos vamos seguir o riacho e ver onde ele pode nos levar 
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(4,4)">
+        Vamos deitar e observar o céu é o melhor a se fazer
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(4,3)">
+       Verifica se todos estão bem, e tenta enteder o que tem que fazer nesse novo teste
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(4,2)">
+        Olha as estrelas a vegetação, tenta encontrar algo para tentar desvendar o porque estão ali
+    </div>
+</div>`;	
     
     let pergunta4 = `
-    <p>Como você costuma se comportar em situações de conflito?</p>
-    <button class="btn btn-primary" onclick="mostrarPergunta(5,4')">1</button>  Uso minha criatividade para buscar soluções inovadoras e não convencionais para resolver o conflito<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(5,3)">2</button> Tento compreender todos os pontos de vista envolvidos e buscar uma solução justa para todas as partes<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(5,1)">3</button> Procuro resolver o conflito de forma direta e objetiva<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(5,2)">4</button> Analiso cuidadosamente a situação e tento ver achar algo bom da situação <br>`;	
+    <div class="row">
+        <h3>Agora você esta completamente sozinho ao seu redor voce ve 4 cada uma com uma placa qual delas escolheria</h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(5,3)">
+        Tranquilidade
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(5,2)">
+        Conhecimento
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(5,1)">
+        Aventura
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(5,4)">
+        Beleza
+    </div>
+</div>`;	
 
     let vazio = [pergunta0, pergunta1, pergunta2, pergunta3, pergunta4];
     let perguntaAtual = 0;
@@ -121,8 +167,14 @@ function casa(Time){
         return resultado = opcoes[Math.floor(Math.random() * opcoes.length)];
     }
 }
+const element = document.querySelector('.row.some');
 
 function openModal(frase) {
+
+const element = document.querySelector('.row.some');
+
+
+element.classList.add('desaparece');
 
 var modal = document.getElementById("myModal");
 modal.style.display = "block";
@@ -132,6 +184,8 @@ document.getElementById("frase").innerHTML =frase;
 function closeModal() {
 var modal = document.getElementById("myModal");
 modal.style.display = "none";
+element.classList.remove('desaparece');
+
 }
 </script>
 </html>
