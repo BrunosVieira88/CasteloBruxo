@@ -15,16 +15,28 @@
             <span id="frase"></span>
     </div>
 </div>    
+
 <button class="btn btn-primary" onclick="openModal(pergunta0)";>Questionario</button>
 </body>
 <script>
 
     let pergunta0 = `
-    <p>Quando se trata de tomar decisões importantes, qual dessas características mais se alinha com você?</p>
-    <button class="btn btn-primary" onclick="mostrarPergunta(1,4)">1</button> Sou capaz de identificar e avaliar cuidadosamente todas as opções disponíveis antes de tomar uma decisão <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(1,1)">2</button> Prefiro seguir minha intuição e tomar decisões rapidamente <br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(1,2)">3</button> Gosto de planejar e seguir um plano cuidadosamente antes de tomar uma decisão<br>
-    <button class="btn btn-primary" onclick="mostrarPergunta(1,3)">4</button>  Levo em consideração a opinião dos outros antes de tomar uma decisão<br>`;
+    
+    <div class="row">
+        <h3>Quando se trata de tomar decisões importantes, qual dessas características mais se alinha com você?</h3>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,4)">
+        Sou capaz de identificar e avaliar cuidadosamente todas as opções disponíveis antes de tomar uma decisão
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,4)">
+        Prefiro seguir minha intuição e tomar decisões rapidamente
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,2)">
+        Gosto de planejar e seguir um plano cuidadosamente antes de tomar uma decisão
+    </div>
+    <div class="btn btn-primary mt-2" onclick="mostrarPergunta(1,3)">
+        Levo em consideração a opinião dos outros antes de tomar uma decisão
+    </div>
+</div>`;
 
     let pergunta1 = `
     <p>Quando confrontado com um obstáculo difícil, qual dessas características mais se alinha com você?</p>
