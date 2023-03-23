@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../leitura.js"></script>
     <link rel="icon" href="../img/Brasao.png">
     <link rel="stylesheet" href="css/stylo.css">
     
@@ -19,7 +20,7 @@
     }
 
 </style>
-<body class="container" style="background-image:url('../img/estrelados.jpg');">
+<body class="container" style="background-image:url('../img/estrelados.jpg');" onload="cancelarLeitura()">
     <img src="../img/TeaPaz.png" style="width: 50%;margin-left: 25%;" class="img-fluid" alt="">
     
 
@@ -29,38 +30,15 @@
         <div >
             <button class="btn btn-primary" onclick="ler()">Deixe o Assistente ler para você</button>
             <button onclick="pausar()">Pausar</button>
-            <button onclick="avançar()">Avançar</button>
         </div>
         <div class=" p-5" id="conteudo">
-            Tea Paz é uma bruxa de 26 anos de aparência marcante, com olhos bem puxados e um nariz redondo que dá um ar agradável ao seu rosto. Ela é branca, com cabelos castanhos claros que emolduram seu rosto delicado. Quando entra em um lugar, sua aura tranquila parece iluminar o ambiente, deixando todos ao seu redor mais à vontade.
-
-            Como uma ex-membro do time Rubrobravo, Tea é uma pessoa corajosa e determinada. Ela tem uma paixão pela luta contra a opressão e está disposta a fazer qualquer coisa para ajudar a revolução a alcançar a vitória. Ela lidera pelo coração e é muito valente, nunca recuando diante de um desafio.
-            
-            No entanto, Tea também tem suas fraquezas. Ela é impulsiva e teimosa, e às vezes isso pode levar a conflitos com seus aliados. Sua arrogância às vezes a faz pensar que ela é a única que sabe o que fazer e pode ignorar os conselhos dos outros. Além disso, ela pode ser agressiva e imprudente em suas ações, o que pode colocá-la e seus companheiros de equipe em perigo.
-            
-            Apesar dessas características negativas, Tea é uma pessoa respeitada por seus colegas de equipe por sua coragem e determinação. Ela é um verdadeiro líder, guiando seus companheiros com paixão e dedicação. Eles confiam nela para liderá-los para a vitória na revolução, e ela fará tudo o que puder para não desapontá-los.
+           <p>Tea Paz é uma bruxa de 26 anos de aparência marcante, com olhos bem puxados e um nariz redondo que dá um ar agradável ao seu rosto. Ela é branca, com cabelos castanhos claros que emolduram seu rosto delicado. Quando entra em um lugar, sua aura tranquila parece iluminar o ambiente, deixando todos ao seu redor mais à vontade.</p> 
+            <p>Como uma ex-membro do time Rubrobravo, Tea é uma pessoa corajosa e determinada. Ela tem uma paixão pela luta contra a opressão e está disposta a fazer qualquer coisa para ajudar a revolução a alcançar a vitória. Ela lidera pelo coração e é muito valente, nunca recuando diante de um desafio.</p>
+            <p> No entanto, Tea também tem suas fraquezas. Ela é impulsiva e teimosa, e às vezes isso pode levar a conflitos com seus aliados. Sua arrogância às vezes a faz pensar que ela é a única que sabe o que fazer e pode ignorar os conselhos dos outros. Além disso, ela pode ser agressiva e imprudente em suas ações, o que pode colocá-la e seus companheiros de equipe em perigo.</p>
+            <p> Apesar dessas características negativas, Tea é uma pessoa respeitada por seus colegas de equipe por sua coragem e determinação. Ela é um verdadeiro líder, guiando seus companheiros com paixão e dedicação. Eles confiam nela para liderá-los para a vitória na revolução, e ela fará tudo o que puder para não desapontá-los.</p>
         </div>
     </div>
 </body>
-<script>
-    var sintetizadorDeVoz = window.speechSynthesis;
-    var textoParaLer = document.getElementById("conteudo").innerText;
-    var leitorDeTexto = new SpeechSynthesisUtterance(textoParaLer);
-    var vozPadrao = "Google português do Brasil";
- 
-    function ler() {
-       leitorDeTexto.voice = sintetizadorDeVoz.getVoices().filter(function(voice) { return voice.name == vozPadrao; })[0];
-       sintetizadorDeVoz.speak(leitorDeTexto);
-    }
- 
-    function pausar() {
-       if (sintetizadorDeVoz.speaking) sintetizadorDeVoz.pause();
-    }
- 
-    function avançar() {
-       if (sintetizadorDeVoz.speaking) sintetizadorDeVoz.resume();
-    }
- </script>
 </html>
 
  

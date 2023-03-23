@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../leitura.js"></script>
     <link rel="icon" href="../img/Brasao.png">
     <link rel="stylesheet" href="css/stylo.css">
     
@@ -19,12 +20,16 @@
     }
 
 </style>
-<body class="container" style="background-image:url('../img/estrelados.jpg');">
+<body class="container" style="background-image:url('../img/estrelados.jpg');" onload="cancelarLeitura()">
     <img src="../img/ArthurVieira.png" style="width: 50%;margin-left: 25%;" class="img-fluid" alt="">
     <div class="card p-5">
         <h2>Arthur Vieira</h2>
         <h2>AuriNegro</h2>
-        <div class=" p-5">
+        <div >
+            <button class="btn btn-primary" onclick="ler()">Deixe o Assistente ler para você</button>
+            <button onclick="pausar()">Pausar</button>
+        </div>
+        <div class=" p-5" id="conteudo">
             Arthur Vieira, de 33 anos, é um homem imponente, com uma aparência marcante devido à sua barba em forma de V, óculos, cabelos longos e desgrenhados e olhos cansados. Ele é um excelente magizoologista e um pesquisador dedicado em runas mágicas, com habilidades excepcionais em lidar com criaturas mágicas. Sua determinação e coragem o tornam um líder natural, e ele é muito respeitado por seus companheiros de luta na Revolução. No entanto, sua teimosia às vezes pode levá-lo a tomar decisões impulsivas, o que pode ter consequências perigosas.
 
 Arthur é muito próximo de sua amiga de longa data, Barbara Barbosa. Eles lutaram juntos pela liberdade dos bruxos na Revolução e foram presos juntos após o ataque terrorista ao Ministério da Magia. Barbara é uma bruxa corajosa e leal, que admira muito Arthur e segue sua liderança sem hesitação.
