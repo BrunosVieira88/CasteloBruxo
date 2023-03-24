@@ -6,10 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../leitura.js"></script>
     <link rel="icon" href="../img/Brasao.png">
     <link rel="stylesheet" href="css/stylo.css">
     
-    <title>Felipe Branco Forte</title>
+    <title>Bruno Santos</title>
 </head>
 <style>
     .img-fluid:hover {
@@ -19,18 +20,33 @@
     }
 
 </style>
-<body class="container" style="background-image:url('../img/estrelados.jpg');">
+<body class="container" style="background-image:url('../img/estrelados.jpg');" onload="cancelarLeitura()">
 
 <img src="../img/BrunoVieira.png" style="width: 50%;margin-left: 25%;" class="img-fluid" alt="">
 <div class="card p-5">
-    <p>
-        Bruno Santos é um jovem bruxo que sempre teve uma aparência frágil e jovial, o que o tornou um alvo fácil para o bullying na escola. O pior de seus agressores era Roberto Guimarães, que o intimidava e o humilhava constantemente.
-        Ele tem uma melhor amiga chamada Dalila Solimões, uma menina branca com sardas de cabelos azuis, que o apoia incondicionalmente. Embora Dalila seja apaixonada por Bruno, ele não tem ideia disso e é perdidamente apaixonado por Dhaiany Paiva, uma aluna do penúltimo ano de Castelo Bruxo. Dhaiany é uma quase mulher branca, ruiva de cabelos compridos, inteligente e talentosa em magia. Bruno não tem coragem de confessar seus sentimentos por Dhaiany,
-        Cansado de ser vítima de abuso, Bruno decidiu adotar uma nova abordagem. Ele começou a se divertir, fazer piadas e agir como um palhaço para desviar a atenção das pessoas de sua aparência jovem e frágil. Embora ainda se sentisse inseguro por dentro, ele tentou transmitir uma imagem de confiança e destemor.
-        No entanto, apesar de sua fachada divertida, Bruno também tinha um lado sombrio. Ele sofria de explosões de raiva que muitas vezes o levavam a agir sem pensar. Em uma dessas explosões, ele usou magia para agredir Roberto Guimarães, o que lhe rendeu um mês de suspensão de Castelo Bruxo.
-        Apesar de sua suspensão, Bruno não perdeu sua popularidade na escola. Muitos alunos admiravam sua coragem e sua personalidade engraçada e descontraída. No entanto, ele teve que lidar com as consequências de seus atos e trabalhar para controlar suas explosões de raiva.
-        Com o tempo, Bruno aprendeu a lidar com suas emoções e a encontrar outras formas de lidar com o bullying. Ele se envolveu em atividades extracurriculares e trabalhou duro em seus estudos, mostrando a todos que ele era muito mais do que sua aparência sugeria.
-        No final, Bruno provou ser um bruxo talentoso e corajoso, que superou o bullying e encontrou seu lugar em Castelo Bruxo. Ele se tornou uma figura respeitada na escola, não apenas por sua personalidade divertida, mas também por sua habilidade mágica e sua determinação em superar seus medos e inseguranças.
+    <div >
+        <button class="btn btn-primary" onclick="ler()">Deixe o Assistente ler para você</button>
+        <button onclick="pausar()">Pausar</button>
+    </div>
+    <p id="conteudo">
+        Bruno Santos é um jovem bruxo que sempre foi alvo de bullying na escola devido à sua aparência jovial e frágil. Ele tem uma melhor amiga chamada Dalila Solimões, uma menina branca com sardas de cabelos azuis, que o apoia incondicionalmente. Apesar de não perceber, Dalila é apaixonada por ele, enquanto Bruno é perdidamente apaixonado por Dhaiany Paiva, uma aluna do penúltimo ano de Castelo Bruxo. Dhaiany é uma quase mulher branca, ruiva de cabelos compridos, inteligente e talentosa em magia.
+
+Bruno tem uma personalidade engraçada e descontraída, mas também tem um lado sombrio, sofrendo de explosões de raiva que muitas vezes o levam a agir sem pensar. Ele está lidando com a recente entrada de sua irmã mais nova, Aline Santos, no primeiro ano em Castelo Bruxo e está preocupado com a possibilidade de que ela possa sofrer o mesmo bullying que ele enfrentou.
+
+Para lidar com o bullying, Bruno adotou uma nova abordagem, tornando-se um palhaço e fazendo piadas para desviar a atenção das pessoas de sua aparência jovem e frágil. Embora ainda se sinta inseguro por dentro, ele tenta transmitir uma imagem de confiança e destemor. Em uma explosão de raiva, ele usou magia para agredir um de seus agressores, o que lhe rendeu um mês de suspensão de Castelo Bruxo.
+
+Apesar da suspensão, Bruno manteve sua popularidade na escola, sendo admirado por muitos alunos por sua coragem e determinação em superar seus medos e inseguranças. Ele também se envolveu em atividades extracurriculares e trabalhou duro em seus estudos, mostrando a todos que ele era muito mais do que sua aparência sugeria.
+
+Ao longo de suas aventuras em Castelo Bruxo, Bruno mostrou ser um bruxo talentoso e corajoso, que não se deixou abalar pelo bullying e encontrou seu lugar na escola. Ele se tornou uma figura respeitada, não apenas por sua personalidade divertida, mas também por sua habilidade mágica e sua determinação em proteger aqueles que ama.
+        Bruno Santos cresceu em uma família com muitas dificuldades financeiras. Seu pai, um bruxo de uma família de classe baixa, lutava com problemas de alcoolismo, o que muitas vezes tornava a vida em casa tumultuada e difícil. Sua mãe, por outro lado, era uma trouxa que havia se casado com seu pai por amor. Ela era dona de casa e dedicada aos seus filhos bruxos, dos quais tinha muito orgulho.
+
+Ainda jovem, Bruno sentiu o peso dessas dificuldades em sua vida. A falta de dinheiro tornava difícil para ele ter acesso a livros e equipamentos mágicos de qualidade, o que o colocava em desvantagem em relação a outros alunos em Castelo Bruxo. Além disso, o comportamento de seu pai muitas vezes constrangia Bruno e sua irmã Aline, que acabara de entrar no primeiro ano em Castelo Bruxo.
+
+Mas apesar desses desafios, Bruno encontrou forças para seguir em frente. Ele era um jovem bruxo talentoso e determinado, que sabia que teria que trabalhar muito mais do que outros alunos para alcançar seus objetivos. Ele estudava com afinco e se esforçava para aprender tudo o que podia sobre magia, apesar das limitações impostas por sua condição financeira.
+
+Além disso, Bruno tinha um grande coração. Ele se preocupava profundamente com sua família e fazia o que podia para ajudá-los a superar seus problemas. Ele sabia que seu pai precisava de ajuda para lidar com seus problemas de alcoolismo e tentava conversar com ele sempre que podia. Ele também era um irmão carinhoso e protetor, que ajudava Aline a se adaptar à vida em Castelo Bruxo e a superar seus próprios desafios.
+
+Com o tempo, Bruno aprendeu a lidar com suas emoções e a encontrar maneiras de superar seus problemas. Ele se tornou um jovem bruxo forte e resiliente, que sabia que não podia permitir que as dificuldades da vida o impedisse de alcançar seus sonhos. E, no final, foi essa determinação e coragem que o levaram a se destacar em Castelo Bruxo e a se tornar um exemplo para outros alunos que enfrentavam desafios semelhantes.
     </p>
 </div>
 </body>
