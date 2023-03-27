@@ -22,28 +22,18 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><img src="img/Brasao.png" style="width: 10%;border-radius: 50%;" class="img-fluid" alt=""></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="/CB/casteloIndex.html">CasteloBruxo</a></li>
+              <li><a class="dropdown-item" href="/ConselhoMagicoBrasileiro/CmbIndex.html">CSM</a></li>
+              <li><a class="dropdown-item" href="/Personagens/PersonagensIndex.html">Personagens</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <p style="color: black;">Esta página já foi acessada <span id="contador"></span> vezes.</p>
       </div>
     </div>
   </nav>
@@ -222,4 +212,16 @@ function openModal(frase) {
     modal.style.display = "block";
     document.getElementById("frase").innerHTML =frase;
 }
+
+// Lê o valor armazenado no navegador ou define como zero
+var contador = localStorage.getItem('contador') || 0;
+
+// Incrementa o contador
+contador++;
+
+// Salva o novo valor no navegador
+localStorage.setItem('contador', contador);
+
+// Atualiza o conteúdo do elemento HTML
+document.getElementById('contador').textContent = contador;
 </script>
