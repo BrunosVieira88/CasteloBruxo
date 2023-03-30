@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,38 @@
     <link rel="icon" href="img/Brasao.png">
     <link rel="stylesheet" href="css/stylo.css">
     <title>Castelo Bruxo</title>
-<body  style="background-image:url('img/estrelados.jpg')">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+</head>
+<style>
+    .fade-out {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(15, 15, 15, 0.8) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 80%);
+        animation: aging 20s linear forwards infinite;
+       
+    }
+
+    @keyframes aging {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
+<body  style="background-image:url('img/estrelados.jpg')" style="width: 100%;">
+
+
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Castelo Bruxo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +67,30 @@
       </div>
     </div>
   </nav>
+--><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="ml-5 btn btn-outline-primary" onclick="playAudio()">Aumente a imersão</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
   <section class="container">
       <div>
@@ -141,10 +195,10 @@
         <p style="color:white;">Esse topico vai ser usado  como uma wiki para meu projeto do livro de fan fic Harry Potter</p>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <img src="img/arthur o ataque ao ministerio.png"  class="img-thumbnail" alt="">
+            <div class="col-md-12 text-center">
+                <img src="img/arthur o ataque ao ministerio.png" style="width: 35rem;"  class="paraimagem fade-out" alt="">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="resumo">
                     <h1>Resumo da história</h1>
                     <p>Miguel é um jovem bruxo que está prestes a começar seus estudos em Castelo Bruxo. Em sua jornada, ele recebe um cajado mágico com núcleo de hidra, um dos mais raros e poderosos do mundo mágico. Mas o que ele não sabe é que esse cajado é objeto de desejo de um ex-revolucionário chamado Arthur, que fará de tudo para consegui-lo.</p>
@@ -155,10 +209,10 @@
         </div>
       </div>
         <div class="row" style="margin-top: 5%;">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <img src="img/MatrizInvertida.png" style="width: 45rem;" class="img-fluid d-flex align-content-center" alt="">
             </div>
-            <div class="col-md-6 card">
+            <div class="col-md-12 card">
                 <h3>A comunidade Bruxa no Brasil</h3>
                 <p>A comunidade bruxa no Brasil é uma sociedade complexa e diversificada, composta por bruxos e bruxas de todas as idades, classes sociais, etnias e orientações sexuais.</p>
                 <p>Ao contrário do que se imagina, a comunidade bruxa no Brasil não é isolada, eles vivem entre os trouxas (pessoas sem habilidades mágicas) e possuem suas próprias instituições, como escolas de magia, lojas de varinhas, lojas de ingredientes mágicos e até mesmo bancos. Eles também possuem suas próprias autoridades, como o Ministério da Magia e o Ministro da Magia, que governam e regulamentam a prática da magia no país.</p>    
@@ -167,10 +221,12 @@
         </div>
       </div>
 
+
+      <audio id="myAudio">
+        <source src="hp.m4a" type="audio/mpeg">
+      </audio>
   </section>
-<script>
-   
-</script>
+
 </body>
 </html>
 <script>
@@ -224,4 +280,22 @@ localStorage.setItem('contador', contador);
 
 // Atualiza o conteúdo do elemento HTML
 document.getElementById('contador').textContent = contador;
+
+  const imagem = document.querySelector('.paraimagem');
+  imagem.addEventListener('animationend', function() {
+      imagem.classList.remove('fade-out');
+      imagem.classList.add('fade-in');
+  });
+
+  imagem.addEventListener('animationstart', function() {
+      imagem.classList.remove('fade-in');
+      imagem.classList.add('fade-out');
+  });
+
+ 
+
+function playAudio() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}
 </script>
