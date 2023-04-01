@@ -14,13 +14,51 @@
             <button id="fecha" onclick="closeModal()">X</button>
             <span id="frase"></span>
     </div>
-</div>    
+</div> 
+<style>
+    p {
+  animation: shuffle 15s linear infinite;
+}
+
+@keyframes shuffle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px) translateX(-20px);
+    letter-spacing: 5px;
+  }
+}
+    h1 {
+  font-size: 42px;
+  text-shadow: 2px 2px 2px grey;
+  animation: move-shadow 2s infinite;
+}
+
+@keyframes move-shadow {
+  0% {
+    text-shadow: 2px 4px 8px grey;
+  }
+  50% {
+    text-shadow: 4px 2px 4px grey;
+  }
+  100% {
+    text-shadow: 3px 3px 3px grey;
+  }
+}
+</style>   
+<p style="color: black;" hidden>Esta página já foi acessada <span id="contador"></span> vezes.</p>
 <div class="text-center mt-5 card p-5 some">
     <h1>Bem Vindo Jovem estudante</h1>
     <p>Você esta prestes a entrar em CasteloBruxo, e vai ser escolhido para seu time</p>
     <p>Há 4 times em CasteloBruxo e voce esta prestes a fazer um teste para determinar qual Time mais combina com você</p>
     <p>Está Pronto o teste acaba de começar!</p>
-    <button class="btn btn-primary" onclick="openModal(pergunta0)";>Questionario</button>
+    <button class="btn btn-primary p-2" onclick="openModal(pergunta0)";>Questionario</button>
 </div>
 
 </body>
@@ -204,5 +242,17 @@ modal.style.display = "none";
 element.classList.remove('desaparece');
 
 }
+
+// Lê o valor armazenado no navegador ou define como zero
+var contador = localStorage.getItem('contador') || 0;
+
+// Incrementa o contador
+contador++;
+
+// Salva o novo valor no navegador
+localStorage.setItem('contador', contador);
+
+// Atualiza o conteúdo do elemento HTML
+document.getElementById('contador').textContent = contador;
 </script>
 </html>
