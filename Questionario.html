@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/stylo.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body class="container">
+<body class="container" style="height: 100%;">
 <div id="myModal" style="display: none">
     <div class="centro">
             <button id="fecha" onclick="closeModal()">X</button>
@@ -16,7 +16,12 @@
     </div>
 </div> 
 <style>
+    .card {
+  height: 80vh;
+  width: 100%;
+}
     p {
+        font-size: 22px;
   animation: shuffle 15s linear infinite;
 }
 
@@ -35,7 +40,7 @@
   }
 }
     h1 {
-  font-size: 42px;
+  font-size: 62px;
   text-shadow: 2px 2px 2px grey;
   animation: move-shadow 2s infinite;
 }
@@ -53,11 +58,12 @@
 }
 </style>   
 <p style="color: black;" hidden>Esta página já foi acessada <span id="contador"></span> vezes.</p>
-<div class="text-center mt-5 card p-5 some">
+<div class="text-center mt-5 card p-5 some" >
     <h1>Bem Vindo Jovem estudante</h1>
     <p>Você esta prestes a entrar em CasteloBruxo, e vai ser escolhido para seu time</p>
     <p>Há 4 times em CasteloBruxo e voce esta prestes a fazer um teste para determinar qual Time mais combina com você</p>
-    <p>Está Pronto o teste acaba de começar!</p>
+    <p>Está Pronto?</p>
+    <p>O teste acaba de começar!</p>
     <button class="btn btn-primary p-2" onclick="openModal(pergunta0)";>Questionario</button>
 </div>
 
