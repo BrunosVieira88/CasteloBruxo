@@ -10,14 +10,13 @@
             <ul class="navbar-nav  mb-2 mb-lg-0 mt-2">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
+                      Mais Opções
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/personagens/create">Criar Personagens</a></li>
                       <li><a class="dropdown-item" href="/personagens">Listar Personagens</a></li>
                     </ul>
                   </li>
-
             </ul>
           </div>
         </div>

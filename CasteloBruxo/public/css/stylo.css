@@ -1,5 +1,5 @@
 .resumo {
-		
+
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -59,7 +59,7 @@ ul {
       margin-top: 50px;
   }
 
-  
+
 
   /* Adiciona uma sombra na caixa de resumo */
   .resumo {
@@ -147,7 +147,7 @@ td, th {
 /* Estilo para as células da tabela quando o mouse passa por cima */
 tr:hover {
   background-color: #ddd;
-} 
+}
 
 
 .imagem {
@@ -198,4 +198,36 @@ display: none;
 }
 #frase{
   margin-top: 15%;
+}
+.fade-out {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(15, 15, 15, 0.8) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 80%);
+    animation: aging 20s linear forwards infinite;
+
+}
+
+@keyframes aging {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.desaparece {
+display: none;
+}
+
+.aparece{
+display: none;
 }
