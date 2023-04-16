@@ -9,6 +9,6 @@ class Personagen extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome','sobrenome', 'idade', 'times', 'descricao','imagem'];
+    protected $fillable = ['nome','sobrenome','ramo', 'idade', 'times', 'descricao','imagem'];
     public $timestamps = false;
 }

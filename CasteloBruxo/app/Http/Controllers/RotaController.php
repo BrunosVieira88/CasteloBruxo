@@ -12,4 +12,9 @@ class RotaController extends Controller
     {
         return view('index');
     }
+
+    public function novidades()
+    {
+        return view('novidades.index');
+    }
 }

@@ -14,6 +14,13 @@
                     <label for="nome">Sobrenome</label>
                     <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Digite o sobrenome">
                 </div>
+                <select name="ramo" class="form-control" id="ramo">
+                    <option value="Fundador">Fundador</option>
+                    <option value="Bruxo">Bruxo</option>
+                    <option value="Professor">Professor</option>
+                    <option value="CSM">CSM</option>
+                    <option value="Alunos">Alunos</option>
+                </select>
                 <div class="form-group">
                     <label for="idade">Idade</label>
                     <input type="text" name="idade" class="form-control" id="idade" placeholder="Digite a idade">

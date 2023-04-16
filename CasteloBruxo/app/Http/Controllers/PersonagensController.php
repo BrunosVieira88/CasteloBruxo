@@ -12,7 +12,7 @@ class PersonagensController extends Controller
 
         /*$personagens = Personagen::all();*/
 
-        $personagens = Personagen::query()->orderBy('nome')->get();
+        $personagens = Personagen::query()->orderBy('ramo','desc')->get();
 
 
         return view('personagens.index', compact('personagens'));
@@ -46,6 +46,7 @@ class PersonagensController extends Controller
         $personagem->nome = $request->input('nome');
         $personagem->sobrenome = $request->input('sobrenome');
         $personagem->idade = $request->input('idade');
+        $personagem->ramo = $request->input('ramo');
         $personagem->times = $request->input('times');
         if ($request->hasFile('imagem')) {
           $personagem->imagem =  $request->file('imagem')->store('imagens');

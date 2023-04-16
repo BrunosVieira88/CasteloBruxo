@@ -16,6 +16,7 @@ class Personagens extends Migration
             $table->increments('id');
             $table->string('nome', 128);
             $table->string('sobrenome', 128);
+            $table->string('ramo', 128);
             $table->string('idade');
             $table->longText('descricao');
             $table->integer('times');

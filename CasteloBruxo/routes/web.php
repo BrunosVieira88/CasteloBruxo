@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\PersonagensController;
-use App\Http\Controllers\RotaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[RotaController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/personagens',[PersonagensController::class, 'ListarPersonagens']);
-Route::get('/personagens/create',[PersonagensController::class, 'CriarPersonagens']);
-Route::post('personagens/armazenar',[PersonagensController::class, 'store']);
-Route::post('/personagens/ProcurarPersonagem',[PersonagensController::class, 'ProcurarPersonagem']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

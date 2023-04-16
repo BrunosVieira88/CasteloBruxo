@@ -1,33 +1,21 @@
 <x-layout title="Castelo Bruxo">
-
     @isset($retorno)
         <div class="container">
             <h1>Personagens Filtrados</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                        <th>Time</th>
-                        <th>Descrição</th>
+            <div class="row">
+                @foreach ($retorno as $personagem)
+                <div class="col-md-3 mt-5" onclick="redirecionar('/{{ $personagem->ramo }}/{{ $personagem->nome }}')">
+                    <div class="container">
+                        <div class="d-flex align-items-end justify-content-center">
+                            <img src="../storage/{{ $personagem->imagem }}" style="cursor:pointer;height:15rem;max-width:15rem;" class="img-fluid" alt="">
+                            <span class="position-absolute bg-light text-dark px-4 py-0 borbulhando">{{ $personagem->nome }} {{ $personagem->sobrenome }}</span>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            </div>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($retorno as $personagem)
-                        <tr>
-                            <td>{{ $personagem->nome }}</td>
-                            <td>{{ $personagem->idade }}</td>
-                            <td>{{ $personagem->time }}</td>
-                            <td>{{ $personagem->descricao }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
         </div>
     @endisset
-
-        <a href="/">Listar personagens</a>
+    <a href="/">Listar personagens</a>
 </x-layout>
-
-
